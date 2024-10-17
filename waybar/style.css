@@ -1,0 +1,113 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+}
+
+#waybar {
+  background: #202E43;
+  color: #EDEDEE; 
+  font-size: 16px;
+  border-radius: 100px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #eeeeef;
+}
+
+#workspaces button.active {
+  color: #D2BD9F;
+}
+ 
+#workspaces button:hover {
+  background: None;
+  box-shadow: None;
+  transition: None;
+  text-shadow: None;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#custom-power,
+#workspaces,
+#window,
+#memory,
+#cpu,
+#pulseaudio,
+#user
+{
+  padding: 4px 8px;
+  background-color: #304666;
+  border-radius: 30px;
+  margin: 6px 4px;
+}
+
+#custom-power
+{
+    color: #ff3385;
+    margin-right: 14px;
+}
+
+#window {
+  color: #929db1;
+}
+
+#tray {
+  margin-left: 4px;
+}
+
+#pulseaudio {
+  color: #0fb9b1;
+}
+
+#cpu {
+  color: #61afef;
+}
+
+#clock {
+}
+
+#memory {
+  color: #c678dd; 
+}
+
+#user {
+  color: #9AB7D3;
+}
+
+.modules-left
+{
+    padding: 0px 10px;
+    border-radius: 8px;
+}
+
+#clock.2
+{
+    color: #f08080;
+    padding: 4px 8px;
+}
+
+#custom-launcher
+{
+    font-size: 20px;
+	color: #61afef;
+}
+
+#custom-discord
+{
+    font-size: 15px;
+}
+
+    #custom-discord.notification
+    {
+        color: #FE8295;
+    }
+
+    #custom-discord.default
+    {
+        color: #737EF3;
+    }

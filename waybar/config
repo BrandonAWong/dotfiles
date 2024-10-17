@@ -1,0 +1,112 @@
+{
+    "layer": "top",
+    "height": 34,
+    "width": 1900,
+    "margin-top": 5,
+    "spacing": 8,
+    "mode": "dock",
+    "modules-left": ["clock#2", "custom/discord", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["user", "cpu", "memory", "pulseaudio", "custom/power"],
+    
+    "custom/launcher":
+    {
+        "format": "󰣇",
+        "tooltip": false
+    },
+
+    "custom/power":
+    {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/suspend/reboot\""
+    },
+
+    "custom/discord":
+    {
+        "exec": "cat ~/.config/waybar/discord/status.txt",
+        "interval": 1,
+        "return-type": "json",
+    },
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "󰲠",
+        "2": "󰲢",
+        "3": "󰲤",
+        "4": "󰲦",
+        "5": "󰲨",
+        "6": "󰲪",
+        "7": "󰲬",
+        "8": "󰲮",
+        "9": "󰲰",
+        "10": "󰿬",
+        "default": ""
+      },
+    },
+
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": true
+	},
+
+    "pulseaudio":
+    {
+        "format": "{volume}%  {icon}",
+        "format-muted": "{volume}% ",
+		"format-icons": ["", ""],
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "{usage}%  ",
+        "tooltip": false
+    },
+
+    "memory":
+    {
+        "interval": 10,
+        "format": "{used:0.1f} GiB  ",
+        "tooltip": false
+    },
+
+	"user":
+	{
+        "format": "{user} {work_d}:{work_H}:{work_M}"
+	},
+
+    "clock": 
+    {
+        "interval": 1,
+        "format": "{:%OI:%M  %p}",
+        "tooltip-format": "{:%r}"
+    },
+
+    "clock#2":
+    {
+       "format": "{:%a  %m/%d}",
+       "tooltip-format": "<tt><small>{calendar}</small></tt>",
+       "calendar": {
+                    "mode-mon-col"  : 3,
+                    "on-scroll"     : 1,
+                    "on-click": "mode",
+                    "format": {
+                              "month":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions": 
+        {
+            "on-click": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+
+}
+

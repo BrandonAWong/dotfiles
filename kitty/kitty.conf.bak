@@ -1,0 +1,16 @@
+font_size 14.0
+cursor_blink_interval 0
+
+enable_audio_bell no
+# foreground #FFFFFF
+# background #181623
+background_opacity 0.85
+# background #a9a9a9 
+
+linux_display_server Wayland
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME
+# cursor #FFFFFF
