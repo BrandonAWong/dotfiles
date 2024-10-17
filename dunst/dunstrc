@@ -4,7 +4,7 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
-    monitor = 0 
+    # monitor = 0 
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse 
+    #follow = none
 
     ### Geometry ###
 
@@ -27,7 +27,7 @@
     width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = 600
 
     # Position the notification in the top right corner
     origin = top-right
@@ -103,7 +103,7 @@
     frame_width = 4 
 
     # Defines color of the frame around the notification window.
-    frame_color = "#90e5f0"
+    frame_color = "#202538"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -340,7 +340,7 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#e8fafc"
+    background = "#FFFFFF"
     foreground = "#000000"
     timeout = 10
     override_pause_level = 30
@@ -357,9 +357,9 @@
     #default_icon = /path/to/icon
 
 [discord_message]
-    appname = WebCord 
+    appname = WebCord
     script = $HOME/.config/waybar/discord/notification_handler.sh
-#
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #
@@ -488,3 +488,4 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+

@@ -6,9 +6,9 @@
 }
 
 #waybar {
-  background: #202E43;
-  color: #EDEDEE; 
-  font-size: 16px;
+  background-color: #222941;
+  color: #eeeeef;
+  font-size: 17.5px;
   border-radius: 100px;
 }
 
@@ -18,42 +18,38 @@
 }
 
 #workspaces button.active {
-  color: #D2BD9F;
-}
- 
-#workspaces button:hover {
-  background: None;
-  box-shadow: None;
-  transition: None;
-  text-shadow: None;
+  color: #625835;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
+#workspaces button:hover {
+  background: None;
 }
 
 #custom-power,
+#temperature,
 #workspaces,
 #window,
-#memory,
-#cpu,
 #pulseaudio,
-#user
-{
+#battery,
+#backlight,
+#network {
   padding: 4px 8px;
-  background-color: #304666;
+  background-color: #343E62;
   border-radius: 30px;
   margin: 6px 4px;
 }
 
-#custom-power
-{
+#custom-power {
     color: #ff3385;
     margin-right: 14px;
 }
 
 #window {
   color: #929db1;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
 }
 
 #tray {
@@ -64,37 +60,39 @@ window#waybar.empty #window {
   color: #0fb9b1;
 }
 
-#cpu {
-  color: #61afef;
+#network {
+  color: #c678dd;
 }
 
 #clock {
 }
 
-#memory {
-  color: #c678dd; 
+#clock.2 {
+  margin-left: 14px;
+  color: #B5BAC9;
+  padding: 4px 8px;
 }
 
-#user {
-  color: #9AB7D3;
+#battery {
+  color: #98c379;
 }
 
-.modules-left
-{
-    padding: 0px 10px;
-    border-radius: 8px;
+#battery.warning {
+  color: #fde396;
 }
 
-#clock.2
-{
-    color: #f08080;
-    padding: 4px 8px;
+#battery.critical {
+  color: #fd96b0;
 }
 
-#custom-launcher
-{
-    font-size: 20px;
-	color: #61afef;
+#backlight {
+  color: #FDFD96;
+}
+
+#custom-launcher {
+  font-size: 24px;
+  margin-left: 5px;
+  color: #61afef;
 }
 
 #custom-discord

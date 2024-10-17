@@ -1,5 +1,5 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
-local twoTab = vim.fn.stdpath("config") .. "/twoTab.vim"
+local html = vim.fn.stdpath("config") .. "/html.vim"
 vim.cmd.source(vimrc)
-vim.cmd.source(twoTab)
+vim.cmd.source(html)
 require("brandon")

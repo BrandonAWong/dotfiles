@@ -1,5 +1,5 @@
 require("autoclose").setup({
     options = {
-        auto_indent = false,
-    },
+        auto_indent = false
+    }
 })

@@ -2,14 +2,14 @@
     "layer": "top",
     "height": 34,
     "width": 1900,
-    "margin-top": 5,
-    "spacing": 8,
-    "mode": "dock",
+    "margin-top": 7,
+    "spacing": 10,
     "modules-left": ["clock#2", "custom/discord", "hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["user", "cpu", "memory", "pulseaudio", "custom/power"],
-    
-    "custom/launcher":
+    "modules-right": ["network", "backlight", "pulseaudio", "battery", "custom/power"],
+
+
+	"custom/launcher":
     {
         "format": "󰣇",
         "tooltip": false
@@ -32,49 +32,47 @@
     "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
-        "1": "󰲠",
-        "2": "󰲢",
-        "3": "󰲤",
-        "4": "󰲦",
-        "5": "󰲨",
-        "6": "󰲪",
-        "7": "󰲬",
-        "8": "󰲮",
-        "9": "󰲰",
-        "10": "󰿬",
+        "active": "",
         "default": ""
-      },
+      }
     },
 
 	"hyprland/window": {
-		"format": "{class}",
-		"separate-outputs": true
+		"format": "{class}"
 	},
 
     "pulseaudio":
     {
-        "format": "{volume}%  {icon}",
-        "format-muted": "{volume}% ",
-		"format-icons": ["", ""],
-        "tooltip": false
+        "format": "{volume}% ",
+        "format-muted": "{volume}%  ",
+		"reverse-scrolling": true
     },
 
-    "cpu": {
-        "interval": 10,
-        "format": "{usage}%  ",
-        "tooltip": false
-    },
-
-    "memory":
+    "network":
     {
-        "interval": 10,
-        "format": "{used:0.1f} GiB  ",
-        "tooltip": false
+        "format": "{essid}  ",
+		"tooltip": false
     },
 
-	"user":
-	{
-        "format": "{user} {work_d}:{work_H}:{work_M}"
+
+    "battery":
+    {
+        "tooltip": false,
+        "interval": 10,
+        "states": 
+        {
+            "warning": 20,
+            "critical":10 
+        },
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+	"backlight": {
+		"format": "{percent}%  ",
+		"reverse-scrolling": true,
+		"tooltip": false
 	},
 
     "clock": 
@@ -89,22 +87,21 @@
        "format": "{:%a  %m/%d}",
        "tooltip-format": "<tt><small>{calendar}</small></tt>",
        "calendar": {
+                    "mode"          : "month",
                     "mode-mon-col"  : 3,
                     "on-scroll"     : 1,
                     "on-click": "mode",
                     "format": {
-                              "month":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "months":     "<span color='#ffffff'><b>{}</b></span>",
+                              "days":       "<span color='#BBAEAE'><b>{}</b></span>",
                               "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
                               "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              "today":      "<span color='#7A7170'><b><u>{}</u></b></span>"
                               }
                     },
         "actions": 
         {
-            "on-click": "mode",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
+                    "on-click": "mode",
         }
     }
 
