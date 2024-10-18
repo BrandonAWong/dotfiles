@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 rm -rf ~/.config/hypr
 ln -sr ~/.dotfiles/hypr ~/.config/hypr
@@ -25,5 +26,14 @@ rm -rf ~/.config/waybar
 ln -sr ~/.dotfiles/waybar ~/.config/waybar
 
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
+
+read -p ":: Link modprobe.d? [y/N] " user_input
+if [[ "$user_input" == "y" ]] || [[ "$user_input" == "Y" ]];then
+    sudo rm -rf /etc/modprobe.d
+    sudo ln -sr ~/.dotfiles/modprobe.d /etc/modprobe.d
+    echo "modprobe config linked"
+else
+    echo "modprobe config linking cancelled"
+fi
 
 echo "Dotfiles linked successfully!"
