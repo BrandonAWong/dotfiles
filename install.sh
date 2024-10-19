@@ -27,6 +27,8 @@ ln -sr ~/.dotfiles/waybar ~/.config/waybar
 
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
 
+ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
+
 read -p ":: Link modprobe.d? [y/N] " user_input
 if [[ "$user_input" == "y" ]] || [[ "$user_input" == "Y" ]];then
     sudo rm -rf /etc/modprobe.d
