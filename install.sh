@@ -26,6 +26,7 @@ rm -rf ~/.config/waybar
 ln -sr ~/.dotfiles/waybar ~/.config/waybar
 
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
+ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
