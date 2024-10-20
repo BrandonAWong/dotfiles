@@ -18,7 +18,10 @@ vim.keymap.set("n", "<C-k><C-d>", function()
     vim.notify("Trailing whitespace removed and file saved!", vim.log.levels.INFO)
 end)
 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Keybinds to remove to make others smoother
 vim.keymap.del('n', '<C-w><C-D>')
 vim.keymap.del('n', '<C-w>d')
+
