@@ -29,5 +29,5 @@ nnoremap y "+y
 vnoremap y "+y
 
 " coloring
-colorscheme catppuccin-frappe
+colorscheme catppuccin-macchiato
 set termguicolors
