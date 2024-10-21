@@ -6,6 +6,7 @@ end)
 
 vim.keymap.set("n", "<C-`>", function()
     vim.cmd("terminal")
+    vim.cmd("startinsert")
 end)
 
 -- remove trailing whitespace + save
