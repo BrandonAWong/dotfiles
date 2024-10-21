@@ -23,7 +23,7 @@ dashboard.section.header.val = {
    dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "The people cry out for strength that is already theirs"
+dashboard.section.footer.val = "Onward! The spear points in only one direction"
 
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"
