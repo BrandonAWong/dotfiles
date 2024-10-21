@@ -30,13 +30,21 @@ ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
+read -p ":: Link paccache.service? [y/N] " user_input
+if [[ "$user_input" == "y" ]] || [[ "$user_input" == "Y" ]];then
+    sudo ln -sf ~/.dotfiles/paccache.service /usr/lib/systemd/system/paccache.service
+    echo " paccache.service linked"
+else
+    echo " paccache.service linking cancelled"
+fi
+
 read -p ":: Link modprobe.d? [y/N] " user_input
 if [[ "$user_input" == "y" ]] || [[ "$user_input" == "Y" ]];then
     sudo rm -rf /etc/modprobe.d
     sudo ln -sr ~/.dotfiles/modprobe.d /etc/modprobe.d
-    echo "modprobe config linked"
+    echo " modprobe config linked"
 else
-    echo "modprobe config linking cancelled"
+    echo " modprobe config linking cancelled"
 fi
 
 echo "Dotfiles linked successfully!"
