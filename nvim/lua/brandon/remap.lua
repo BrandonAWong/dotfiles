@@ -9,6 +9,8 @@ vim.keymap.set("n", "<C-`>", function()
     vim.cmd("startinsert")
 end)
 
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
+
 -- remove trailing whitespace + save
 vim.keymap.set("n", "<C-k><C-d>", function()
     local cur_pos = vim.api.nvim_win_get_cursor(0)
