@@ -13,6 +13,9 @@ vim.keymap.set('n', '<leader>7', '<Cmd>BufferGoto 7<CR>', {})
 vim.keymap.set('n', '<leader>8', '<Cmd>BufferGoto 8<CR>', {})
 vim.keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', {})
 
+vim.keymap.set('n', '<A-1>', '<Cmd>BufferMovePrevious<CR>', {})
+vim.keymap.set('n', '<A-2>', '<Cmd>BufferMoveNext<CR>', {})
+
 vim.keymap.set('n', '<C-w>', function()
     local buf_type = vim.api.nvim_buf_get_option(0, 'buftype')
 

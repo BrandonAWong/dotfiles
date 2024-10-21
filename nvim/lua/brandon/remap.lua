@@ -6,7 +6,10 @@ end)
 
 vim.keymap.set("n", "<C-`>", function()
     vim.cmd("terminal")
+    vim.cmd("startinsert")
 end)
+
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
 
 -- remove trailing whitespace + save
 vim.keymap.set("n", "<C-k><C-d>", function()
@@ -21,7 +24,7 @@ end)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-
--- Keybinds to remove to make others smoother
+-- Keybinds to remove to make close buffer <C-w> take precedence 
 vim.keymap.del('n', '<C-w><C-D>')
 vim.keymap.del('n', '<C-w>d')
+

@@ -32,5 +32,9 @@ Plug 'm4xshen/autoclose.nvim'
 Plug 'nvim-tree/nvim-web-devicons' " OPTIONAL: for file icons
 Plug 'lewis6991/gitsigns.nvim' " OPTIONAL: for git status
 Plug 'romgrk/barbar.nvim'
+
+" alpha
+Plug 'goolord/alpha-nvim'
+
 call plug#end()
 
