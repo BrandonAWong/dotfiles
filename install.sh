@@ -30,6 +30,8 @@ ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
+ln -sf ~/.dotfiles/starship.toml ~/.config/starship.toml
+
 read -p ":: Link paccache.service? [y/N] " user_input
 if [[ "$user_input" == "y" ]] || [[ "$user_input" == "Y" ]];then
     sudo ln -sf ~/.dotfiles/paccache.service /usr/lib/systemd/system/paccache.service
