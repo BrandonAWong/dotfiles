@@ -14,3 +14,6 @@ export EDITOR=nvim
 
 export PATH=$PATH:.
 source /usr/share/nvm/init-nvm.sh
+
+eval "$(starship init bash)"
+
