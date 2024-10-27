@@ -7,6 +7,7 @@ require('telescope').setup {
             ".jpg",
             ".png",
             ".svg",
+            ".pdf",
         }
     }
 }
