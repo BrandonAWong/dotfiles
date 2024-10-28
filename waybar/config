@@ -56,6 +56,7 @@
         "format": "{volume}%  {icon}",
         "format-muted": "{volume}% ",
 		"format-icons": ["", ""],
+        "on-click": "pavucontrol",
         "tooltip": false
     },
 
