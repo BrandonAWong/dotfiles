@@ -1,13 +1,17 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
 
-# Use custom format
 format = """
-[╭─](white)$username$hostname in $directory$python$c$nodejs$dotnet$git_branch$cmd_duration
+[╭─](white)$username$hostname in \
+    $directory\
+    $python\
+    $c\
+    $nodejs\
+    $dotnet\
+    $git_branch\
+    $git_metrics\
+    $cmd_duration
 [╰─](white)$character """
 
-
-# Username settings
 [username]
 show_always = true
 style_root = "bold red"
@@ -15,34 +19,29 @@ style_user = "blue"
 format = "[$user]($style) "
 disabled = false
 
-# Hostname settings
 [hostname]
 ssh_only = false
 format =  "on [$hostname](dimmed blue)"
 disabled = false
 
-# Directory indicator
 [directory]
 style = "bold cyan"
-read_only_style = "red"
+read_only_style = "bold red"
 truncation_length = 8
 truncation_symbol = "…/"
 format = "[$read_only]($read_only_style)[$path]($style) "
 disabled = false
 
-# C settings
 [c]
 symbol = " "
 style = "bold blue"
 format = "[${symbol}${version}]($style) "
 
-# Python settings
 [python]
 symbol = " "
 style = "bold yellow"
-format = "[${symbol}${version}]($style) "
+format = "[${symbol}${version}${virtualenv}]($style) "
 
-# NodeJS settings 
 [nodejs]
 symbol = " "
 style = "bold yellow"
@@ -54,21 +53,25 @@ style = "bold purple"
 format = "[${symbol}${version}]($style) "
 
 
-# git settings
 [git_branch]
 symbol = " "
 disabled = true
 
-# cmd_duration config
+[git_metrics]
+added_style = "bold green"
+deleted_style = "bold red"
+format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
+disabled = false
+
 [cmd_duration]
 show_milliseconds = true
 style = "bold green"
 format = "took [$duration]($style)"
 
-# Charakter config
 [character]
 format = "$symbol"
 success_symbol = "[❯](bold green)"
 error_symbol = "[✗](bold red) "
 vicmd_symbol = "[❮](bold green)"
 disabled = false
+
