@@ -43,8 +43,9 @@
 
     "pulseaudio":
     {
-        "format": "{volume}% ",
+        "format": "{volume}% {icon}",
         "format-muted": "{volume}%  ",
+        "format-icons": ["", ""],
 		"reverse-scrolling": true
     },
 
