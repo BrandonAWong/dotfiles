@@ -15,8 +15,8 @@ vim.keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', {})
 
 vim.keymap.set('n', '<A-1>', '<Cmd>BufferMovePrevious<CR>', {})
 vim.keymap.set('n', '<A-2>', '<Cmd>BufferMoveNext<CR>', {})
-vim.keymap.set('n', '<A-j>', '<Cmd>BufferPrevious<CR>', {})
-vim.keymap.set('n', '<A-k>', '<Cmd>BufferNext<CR>', {})
+vim.keymap.set('n', '<A-h>', '<Cmd>BufferPrevious<CR>', {})
+vim.keymap.set('n', '<A-l>', '<Cmd>BufferNext<CR>', {})
 
 vim.keymap.set('n', '<C-w>', function()
     local buf_type = vim.api.nvim_buf_get_option(0, 'buftype')
