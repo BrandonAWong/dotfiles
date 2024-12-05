@@ -4,4 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-Hyprland
+if [ -z "$TMUX" ]; then
+    Hyprland
+fi
+
