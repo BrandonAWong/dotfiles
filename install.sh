@@ -25,6 +25,9 @@ ln -sr ~/.dotfiles/rofi ~/.config/rofi
 rm -rf ~/.config/waybar
 ln -sr ~/.dotfiles/waybar ~/.config/waybar
 
+rm -rf ~/.config/melonDS
+ln -sr ~/.dotfiles/melonDS ~/.config/melonDS
+
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
 ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 
