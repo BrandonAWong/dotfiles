@@ -1,16 +1,16 @@
 add_newline = false
 
 format = """
-[╭─](white)$username$hostname in \
+$python\
+$username$hostname in \
     $directory\
-    $python\
     $c\
     $nodejs\
     $dotnet\
     $git_branch\
     $git_metrics\
     $cmd_duration
-[╰─](white)$character """
+$character """
 
 [username]
 show_always = true
@@ -36,21 +36,23 @@ disabled = false
 symbol = " "
 style = "bold blue"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 [python]
-symbol = " "
-style = "bold yellow"
-format = "[${symbol}${version}${virtualenv}]($style) "
+style = "bold purple"
+format = '[(\($virtualenv\) )]($style)'
 
 [nodejs]
 symbol = " "
 style = "bold yellow"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 [dotnet]
 symbol = " "
 style = "bold purple"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 
 [git_branch]
@@ -70,7 +72,5 @@ format = "took [$duration]($style)"
 
 [character]
 format = "$symbol"
-success_symbol = "[❯](bold green)"
-error_symbol = "[✗](bold red) "
-vicmd_symbol = "[❮](bold green)"
+success_symbol = "[➤](bold green)"
 disabled = false
