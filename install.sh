@@ -28,6 +28,9 @@ ln -sr ~/.dotfiles/waybar ~/.config/waybar
 rm -rf ~/.config/melonDS
 ln -sr ~/.dotfiles/melonDS ~/.config/melonDS
 
+rm -rf ~/.config/atuin
+ln -sr ~/.dotfiles/atuin ~/.config/atuin
+
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
 ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
 ln -sf ~/.dotfiles/.blerc ~/.blerc
