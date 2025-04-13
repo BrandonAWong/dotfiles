@@ -17,3 +17,6 @@ source /usr/share/nvm/init-nvm.sh
 
 eval "$(starship init bash)"
 
+source /usr/share/blesh/ble.sh --noattach
+eval "$(atuin init bash)"
+[[ ${BLE_VERSION-} ]] && ble-attach

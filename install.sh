@@ -24,8 +24,12 @@ ln -sr ~/.dotfiles/rofi ~/.config/rofi
 rm -rf ~/.config/waybar
 ln -sr ~/.dotfiles/waybar ~/.config/waybar
 
+rm -rf ~/.config/atuin
+ln -sr ~/.dotfiles/atuin ~/.config/atuin
+
 ln -sf ~/.dotfiles/.bashrc ~/.bashrc
 ln -sf ~/.dotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/.dotfiles/.blerc ~/.blerc
 
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 
