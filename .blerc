@@ -4,7 +4,12 @@ bleopt complete_menu_filter=
 bleopt complete_ambiguous=
 bleopt complete_auto_history=
 bleopt complete_auto_delay= 
+
+bleopt default_keymap=vi
+bleopt keymap_vi_mode_string_nmap:=$'\e[1m-- NORMAL --\e[m'
+
 bleopt exec_errexit_mark=
+bleopt prompt_eol_mark=
 
 ble-color-setface syntax_error fg=none,bg=none
 ble-color-setface filename_directory fg=blue
