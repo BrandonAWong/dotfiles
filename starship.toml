@@ -1,9 +1,8 @@
 add_newline = false
 
 format = """
-[╭─](white)$username$hostname in \
+[╭─](white)$python$username$hostname in \
     $directory\
-    $python\
     $c\
     $nodejs\
     $dotnet\
@@ -36,21 +35,23 @@ disabled = false
 symbol = " "
 style = "bold blue"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 [python]
-symbol = " "
-style = "bold yellow"
-format = "[${symbol}${version}${virtualenv}]($style) "
+style = "bold purple"
+format = '[(\($virtualenv\) )]($style)'
 
 [nodejs]
 symbol = " "
 style = "bold yellow"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 [dotnet]
 symbol = " "
 style = "bold purple"
 format = "[${symbol}${version}]($style) "
+disabled = true
 
 
 [git_branch]
