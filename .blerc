@@ -5,7 +5,6 @@ bleopt complete_ambiguous=
 bleopt complete_auto_history=
 bleopt complete_auto_delay= 
 
-bleopt default_keymap=vi
 bleopt keymap_vi_mode_string_nmap:=$'\e[1m-- NORMAL --\e[m'
 
 bleopt exec_errexit_mark=
