@@ -36,5 +36,8 @@ Plug 'romgrk/barbar.nvim'
 " alpha
 Plug 'goolord/alpha-nvim'
 
+" trouble
+Plug 'folke/trouble.nvim'
+
 call plug#end()
 
