@@ -1,11 +1,19 @@
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
-require'lspconfig'.ts_ls.setup{}
-require'lspconfig'.html.setup{}
-require'lspconfig'.omnisharp.setup{}
+vim.lsp.config('*', {})
+
+vim.lsp.enable({
+    'pyright',
+    'clangd',
+    'ts_ls',
+    'html',
+    'omnisharp'
+})
+
+vim.diagnostic.config({
+    virtual_text = true,
+})
 
 local cmp = require('cmp')
 cmp.setup({
