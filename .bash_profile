@@ -4,4 +4,4 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-Hyprland
+start-hyprland
