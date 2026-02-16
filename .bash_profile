@@ -5,6 +5,6 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then
-    Hyprland
+    start-hyprland
 fi
 
